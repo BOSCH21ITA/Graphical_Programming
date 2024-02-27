@@ -4,7 +4,7 @@ import resources.kmh;
 import resources.m;
 import resources.s;
 
-class MyTurn {
+singleton class MyTurn {
 	@get
 	m x = 0.0 [m];
 	@get
