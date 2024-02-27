@@ -2,9 +2,9 @@
 
 ## Block Diagrams
 - myCar: Niklas
-- myDrive: Niklas
+- myDrive: -
 - Control: Max
-- Driver: -
+- Driver: Niklas
 - ACC: -
 
 ## Important Links
