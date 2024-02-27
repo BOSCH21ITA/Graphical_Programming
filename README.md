@@ -1,10 +1,10 @@
 # Graphical_Programming
 
 ## Block Diagrams
-- myCar: Niklas
+- myCar: -
 - myDrive: -
 - Control: Max
-- Driver: Niklas
+- Driver: -
 - ACC: Joel
 - Testdriver: Felix
 
