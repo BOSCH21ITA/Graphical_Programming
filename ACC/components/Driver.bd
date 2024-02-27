@@ -1,0 +1,6 @@
+classType components.Driver
+blockdiagramSpecification proc_10ms_spec {
+	methodBody proc_10ms {
+		outPin active
+	}
+}
