@@ -2,20 +2,59 @@ classType MyCCF.myCar.Control
 blockdiagramSpecification Main {
 	methodBody calc {
 		outPin active {
-			connection_1
+			connection_3, connection_4, connection_6, connection_8
 		}
 	}
-	simpleIdentifier MyCCF.resources.DriverMessages.display at (671, 65) {
+	simpleIdentifier MyCCF.resources.DriverMessages.display at (671, 45) {
 		label at (0, -1)
-		inPin connection_2
+		inPin connection_9
 		sequenceCall {
-			inPin connection_1
+			inPin connection_8
 		}
 	}
 	simpleIdentifier MyCCF.resources.DriverMessages.on at (181, 65) {
 		label at (0, -1)
 		outPin {
-			connection_2
+			connection_5
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	complexIdentifier ACC_instance at (391, 41) size (14, 8) {
+		label at (0, 1)
+		methodCall MyCCF.myCar.ACC.aCCStatemachineTrigger {
+			methodVoidPin at (top, 0) sequenceCall at (-14, -34) {
+				inPin connection_3
+			}
+		}
+		elementCall (MyCCF.myCar.ACC.brake) {
+			argumentPin at (left, 0) connection_7
+			sequenceCall {
+				inPin connection_6
+			}
+		}
+		elementCall (MyCCF.myCar.ACC.on) {
+			argumentPin at (left, 1) connection_5 {
+				bendpoints (160, 0)
+			}
+			sequenceCall {
+				inPin connection_4
+			}
+		}
+		elementCall (MyCCF.myCar.ACC.accOn) {
+			returnPin at (right, 0) {
+				connection_9
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+	simpleIdentifier MyCCF.resources.DriverMessages.brake at (181, 45) {
+		label at (0, -1)
+		outPin {
+			connection_7
 		}
 		sequenceCall {
 			inPin
