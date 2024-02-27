@@ -2,7 +2,7 @@ classType MyCCF.myCar.Control
 blockdiagramSpecification Main {
 	methodBody calc {
 		outPin active {
-			connection_3, connection_4, connection_6, connection_8
+			connection_3, connection_4, connection_6, connection_8, connection_10
 		}
 	}
 	simpleIdentifier MyCCF.resources.DriverMessages.display at (671, 45) {
@@ -54,10 +54,19 @@ blockdiagramSpecification Main {
 	simpleIdentifier MyCCF.resources.DriverMessages.brake at (181, 45) {
 		label at (0, -1)
 		outPin {
-			connection_7
+			connection_11, connection_7
 		}
 		sequenceCall {
 			inPin
+		}
+	}
+	simpleIdentifier MyCCF.resources.CarMessages.brake at (681, 135) {
+		label at (0, -1)
+		inPin connection_11 {
+			bendpoints (50, 0), (50, 90)
+		}
+		sequenceCall {
+			inPin connection_10
 		}
 	}
 }

@@ -56,7 +56,7 @@
 		        QP_BLOB 1
 		    /end SOURCE
 		    /begin TP_BLOB
-		         /* programm id */ 883396747
+		         /* programm id */ 883402992
 		         /* target id   */ 7
 		         /*             */ 0 2 0
 		    /end TP_BLOB
@@ -857,6 +857,7 @@
 				MyCCF.resources.DriverMessages.on
 			/end IN_MEASUREMENT
 			/begin OUT_MEASUREMENT
+				MyCCF.resources.CarMessages.brake
 				MyCCF.resources.DriverMessages.display
 			/end OUT_MEASUREMENT
 			/begin SUB_FUNCTION
