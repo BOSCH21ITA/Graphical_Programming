@@ -2,17 +2,17 @@ classType MyCCF.myCar.myCar
 blockdiagramSpecification Main {
 	methodBody calc {
 		outPin active {
-			connection_21, connection_19, connection_24, connection_30, connection_40
+			connection_19, connection_24, connection_30, connection_40, connection_44
 		}
 	}
-	simpleIdentifier MyCCF.resources.CarMessages.v at (511, 125) {
+	simpleIdentifier MyCCF.resources.CarMessages.v at (691, 215) {
 		label at (0, -1)
 		inPin connection_20
 		sequenceCall at (-10, -14) {
 			inPin connection_19
 		}
 	}
-	complexIdentifier myVehicle at (151, 61) size (33, 14) backgroundColor #ffffff {
+	complexIdentifier myVehicle at (331, 151) size (33, 14) backgroundColor #ffffff {
 		label at (-10, 1)
 		methodCall MyCCF.myCar.myDrive_3.move {
 			argumentPin powerCtrl at (left, 2) connection_3
@@ -63,21 +63,21 @@ blockdiagramSpecification Main {
 			}
 		}
 	}
-	simpleIdentifier MyCCF.resources.CarMessages.x at (611, 65) {
+	simpleIdentifier MyCCF.resources.CarMessages.x at (791, 155) {
 		label at (0, -1)
 		inPin connection_41
 		sequenceCall at (-10, -14) {
 			inPin connection_40
 		}
 	}
-	simpleIdentifier MyCCF.resources.CarMessages.y at (561, 95) {
+	simpleIdentifier MyCCF.resources.CarMessages.y at (741, 185) {
 		label at (0, -1)
 		inPin connection_25
 		sequenceCall at (-10, -14) {
 			inPin connection_24
 		}
 	}
-	simpleIdentifier g at (241, 225) {
+	simpleIdentifier g at (421, 315) {
 		label at (0, -1)
 		outPin {
 			connection_11
@@ -86,7 +86,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier MyCCF.resources.CarMessages.steering at (51, 25) {
+	simpleIdentifier MyCCF.resources.CarMessages.steering at (231, 115) {
 		label at (0, -1)
 		outPin {
 			connection_18
@@ -95,7 +95,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier MyCCF.resources.CarMessages.bearing at (511, 25) {
+	simpleIdentifier MyCCF.resources.CarMessages.bearing at (691, 115) {
 		label at (0, -1)
 		inPin connection_31 {
 			bendpoints (0, -20)
@@ -104,7 +104,7 @@ blockdiagramSpecification Main {
 			inPin connection_30
 		}
 	}
-	simpleIdentifier MyCCF.resources.CarMessages.power at (61, 85) {
+	simpleIdentifier MyCCF.resources.CarMessages.power at (241, 175) {
 		label at (0, -1)
 		outPin {
 			connection_3
@@ -113,7 +113,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier MyCCF.resources.CarMessages.brake at (61, 155) {
+	simpleIdentifier MyCCF.resources.CarMessages.brake at (241, 245) {
 		label at (0, -1)
 		outPin {
 			connection_1
@@ -122,7 +122,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier SystemLib.Miscellaneous.DeltaTimeService.deltaT at (281, 275) {
+	simpleIdentifier SystemLib.Miscellaneous.DeltaTimeService.deltaT at (461, 365) {
 		label at (-30, -1)
 		inPin outPin {
 			connection_43
@@ -131,7 +131,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	multiplication at (371, 286) {
+	multiplication at (551, 376) {
 		inPin connection_43 {
 			bendpoints (30, 0), (30, 10)
 		}
@@ -142,10 +142,28 @@ blockdiagramSpecification Main {
 			connection_16
 		}
 	}
-	literal unit MyCCF.resources.s "1.0" at (291, 313) size (49, 0) {
+	literal unit MyCCF.resources.s "1.0" at (471, 403) size (49, 0) {
 		label at (0, 4)
 		outPin {
 			connection_42
+		}
+	}
+	if at (161, 141) {
+		inPin connection_46
+		ifControlFlowOutPin {
+			connection_21
+		}
+		sequenceCall {
+			inPin connection_44
+		}
+	}
+	simpleIdentifier MyCCF.resources.DriverMessages.ignition at (71, 145) {
+		label at (0, -1)
+		outPin {
+			connection_46
+		}
+		sequenceCall {
+			inPin
 		}
 	}
 }
