@@ -2,7 +2,7 @@ classType MyCCF.myCar.Driver
 blockdiagramSpecification Main {
 	methodBody calc {
 		outPin active {
-			connection_1, connection_3
+			connection_1, connection_3, connection_5, connection_7, connection_9
 		}
 	}
 	simpleIdentifier controlACC at (391, 75) {
@@ -35,6 +35,54 @@ blockdiagramSpecification Main {
 		inPin connection_4
 		sequenceCall {
 			inPin connection_3
+		}
+	}
+	simpleIdentifier ignition at (401, 215) {
+		label at (0, -1)
+		outPin {
+			connection_6
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier MyCCF.resources.DriverMessages.ignition at (641, 215) {
+		label at (0, -1)
+		inPin connection_6
+		sequenceCall {
+			inPin connection_5
+		}
+	}
+	simpleIdentifier power at (401, 285) {
+		label at (0, -1)
+		outPin {
+			connection_8
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier targetSpeed at (401, 335) {
+		label at (0, -1)
+		outPin {
+			connection_10
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier MyCCF.resources.DriverMessages.power at (651, 285) {
+		label at (0, -1)
+		inPin connection_8
+		sequenceCall {
+			inPin connection_7
+		}
+	}
+	simpleIdentifier MyCCF.resources.DriverMessages.soll at (651, 335) {
+		label at (0, -1)
+		inPin connection_10
+		sequenceCall {
+			inPin connection_9
 		}
 	}
 }

@@ -419,6 +419,21 @@
 			/end IF_DATA
 		/end CHARACTERISTIC
 
+		/begin CHARACTERISTIC MyCCF.myCar.myCar.ignition
+			/* long identifier    */ ""
+			/* type               */ VALUE
+			/* ecu address        */ 0x0
+			/* record layout      */ STANDARD_VALUE_U8
+			/* max diff value     */ 0.0
+			/* conversion         */ esdl_ident
+			/* lower limit        */ 0
+			/* upper limit        */ 1
+			BIT_MASK 0x1
+			/begin IF_DATA E_TARGET
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1000 2
+			/end IF_DATA
+		/end CHARACTERISTIC
+
 		/begin CHARACTERISTIC MyCCF.myCar.Driver.controlACC
 			/* long identifier    */ ""
 			/* type               */ VALUE
@@ -445,6 +460,49 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			/begin IF_DATA E_TARGET
 			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 1 1000 1
+			/end IF_DATA
+		/end CHARACTERISTIC
+
+		/begin CHARACTERISTIC MyCCF.myCar.Driver.ignition
+			/* long identifier    */ ""
+			/* type               */ VALUE
+			/* ecu address        */ 0x0
+			/* record layout      */ STANDARD_VALUE_U8
+			/* max diff value     */ 0.0
+			/* conversion         */ esdl_ident
+			/* lower limit        */ 0
+			/* upper limit        */ 1
+			BIT_MASK 0x1
+			/begin IF_DATA E_TARGET
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 1 1000 2
+			/end IF_DATA
+		/end CHARACTERISTIC
+
+		/begin CHARACTERISTIC MyCCF.myCar.Driver.power
+			/* long identifier    */ ""
+			/* type               */ VALUE
+			/* ecu address        */ 0x0
+			/* record layout      */ STANDARD_VALUE_R32
+			/* max diff value     */ 0.0
+			/* conversion         */ esdl_ident
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			/begin IF_DATA E_TARGET
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 1 1000 3
+			/end IF_DATA
+		/end CHARACTERISTIC
+
+		/begin CHARACTERISTIC MyCCF.myCar.Driver.targetSpeed
+			/* long identifier    */ ""
+			/* type               */ VALUE
+			/* ecu address        */ 0x0
+			/* record layout      */ STANDARD_VALUE_R32
+			/* max diff value     */ 0.0
+			/* conversion         */ esdl_ident_kmh
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			/begin IF_DATA E_TARGET
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 1 1000 4
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -646,7 +704,7 @@
 			/end IF_DATA
 		/end MEASUREMENT
 
-		/begin MEASUREMENT MyCCF.resources.DriverMessages.on
+		/begin MEASUREMENT MyCCF.resources.DriverMessages.ignition
 			/* long identifier    */ ""
 			/* datatype           */ UBYTE
 			/* conversion         */ esdl_ident
@@ -661,7 +719,7 @@
 			/end IF_DATA
 		/end MEASUREMENT
 
-		/begin MEASUREMENT MyCCF.resources.DriverMessages.display
+		/begin MEASUREMENT MyCCF.resources.DriverMessages.on
 			/* long identifier    */ ""
 			/* datatype           */ UBYTE
 			/* conversion         */ esdl_ident
@@ -676,7 +734,7 @@
 			/end IF_DATA
 		/end MEASUREMENT
 
-		/begin MEASUREMENT MyCCF.resources.DriverMessages.increment
+		/begin MEASUREMENT MyCCF.resources.DriverMessages.display
 			/* long identifier    */ ""
 			/* datatype           */ UBYTE
 			/* conversion         */ esdl_ident
@@ -691,7 +749,7 @@
 			/end IF_DATA
 		/end MEASUREMENT
 
-		/begin MEASUREMENT MyCCF.resources.DriverMessages.decrement
+		/begin MEASUREMENT MyCCF.resources.DriverMessages.increment
 			/* long identifier    */ ""
 			/* datatype           */ UBYTE
 			/* conversion         */ esdl_ident
@@ -706,6 +764,21 @@
 			/end IF_DATA
 		/end MEASUREMENT
 
+		/begin MEASUREMENT MyCCF.resources.DriverMessages.decrement
+			/* long identifier    */ ""
+			/* datatype           */ UBYTE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0
+			/* upper limit        */ 1
+			ECU_ADDRESS 0x0
+			BIT_MASK 0x1
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1001 6
+			/end IF_DATA
+		/end MEASUREMENT
+
 		/begin MEASUREMENT MyCCF.resources.DriverMessages.soll
 			/* long identifier    */ ""
 			/* datatype           */ FLOAT32_IEEE
@@ -716,7 +789,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1001 6
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1001 7
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -783,11 +856,13 @@
 			""
 			/begin DEF_CHARACTERISTIC
 				MyCCF.myCar.myCar.g
+				MyCCF.myCar.myCar.ignition
 			/end DEF_CHARACTERISTIC
 			/begin IN_MEASUREMENT
 				MyCCF.resources.CarMessages.brake
 				MyCCF.resources.CarMessages.power
 				MyCCF.resources.CarMessages.steering
+				MyCCF.resources.DriverMessages.ignition
 			/end IN_MEASUREMENT
 			/begin OUT_MEASUREMENT
 				MyCCF.resources.CarMessages.bearing
@@ -841,13 +916,19 @@
 			/begin DEF_CHARACTERISTIC
 				MyCCF.myCar.Driver.controlACC
 				MyCCF.myCar.Driver.brake
+				MyCCF.myCar.Driver.ignition
+				MyCCF.myCar.Driver.power
+				MyCCF.myCar.Driver.targetSpeed
 			/end DEF_CHARACTERISTIC
 			/begin IN_MEASUREMENT
 				MyCCF.resources.DriverMessages.display
 			/end IN_MEASUREMENT
 			/begin OUT_MEASUREMENT
 				MyCCF.resources.DriverMessages.brake
+				MyCCF.resources.DriverMessages.ignition
 				MyCCF.resources.DriverMessages.on
+				MyCCF.resources.DriverMessages.power
+				MyCCF.resources.DriverMessages.soll
 			/end OUT_MEASUREMENT
 		/end FUNCTION
 		/begin FUNCTION MyCCF.myCar.Control
@@ -914,6 +995,9 @@
 			/begin REF_CHARACTERISTIC
 				MyCCF.myCar.Driver.controlACC
 				MyCCF.myCar.Driver.brake
+				MyCCF.myCar.Driver.ignition
+				MyCCF.myCar.Driver.power
+				MyCCF.myCar.Driver.targetSpeed
 			/end REF_CHARACTERISTIC
 		/end GROUP
 		/begin GROUP MyCCF.myCar.myCar
@@ -921,6 +1005,7 @@
 			ROOT
 			/begin REF_CHARACTERISTIC
 				MyCCF.myCar.myCar.g
+				MyCCF.myCar.myCar.ignition
 			/end REF_CHARACTERISTIC
 			/begin SUB_GROUP
 				MyCCF.myCar.myCar.myVehicle
@@ -984,6 +1069,7 @@
 				MyCCF.resources.DriverMessages.brake
 				MyCCF.resources.DriverMessages.decrement
 				MyCCF.resources.DriverMessages.display
+				MyCCF.resources.DriverMessages.ignition
 				MyCCF.resources.DriverMessages.increment
 				MyCCF.resources.DriverMessages.on
 				MyCCF.resources.DriverMessages.power
