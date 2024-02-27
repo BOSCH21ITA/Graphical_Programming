@@ -1,0 +1,292 @@
+classType myCar.Driver
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active {
+			connection_7
+		}
+	}
+	simpleIdentifier resources.DriverMessages.power at (571, 245) {
+		label at (0, -1)
+		inPin connection_2
+		sequenceCall {
+			inPin connection_1 {
+				bendpoints (180, 0), (180, 20)
+			}
+		}
+	}
+	simpleIdentifier mypower at (211, 245) {
+		label at (0, -1)
+		outPin {
+			connection_2
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.DriverMessages.on at (491, 415) {
+		label at (0, -1)
+		inPin connection_6 {
+			bendpoints (230, 0)
+		}
+		sequenceCall {
+			inPin connection_5 {
+				bendpoints (0, 190)
+			}
+		}
+	}
+	simpleIdentifier resources.DriverMessages.soll at (551, 365) {
+		label at (0, -1)
+		inPin connection_4 {
+			bendpoints (0, 10), (290, 10)
+		}
+		sequenceCall {
+			inPin connection_3 {
+				bendpoints (140, 0), (140, 140)
+			}
+		}
+	}
+	simpleIdentifier mysoll at (221, 345) {
+		label at (0, -1)
+		outPin {
+			connection_4
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier myon at (221, 425) {
+		label at (0, -1)
+		outPin {
+			connection_6
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier automatic at (181, 165) {
+		label at (0, -1)
+		outPin {
+			connection_8
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	ifElse at (331, 171) {
+		inPin connection_8 {
+			bendpoints (110, 0)
+		}
+		ifControlFlowOutPin {
+			connection_13, connection_17, connection_19, connection_21, connection_23, connection_33, connection_35
+		}
+		elseControlFlowOutPin {
+			connection_1, connection_3, connection_5
+		}
+		sequenceCall {
+			inPin connection_7
+		}
+	}
+	simpleIdentifier resources.DriverMessages.power at (611, 55) {
+		label at (0, -1)
+		inPin connection_20 {
+			bendpoints (0, -120)
+		}
+		sequenceCall {
+			inPin connection_19 {
+				bendpoints (220, 0)
+			}
+		}
+	}
+	simpleIdentifier resources.DriverMessages.soll at (721, 245) {
+		label at (0, -1)
+		inPin connection_22 {
+			bendpoints (60, 0)
+		}
+		sequenceCall {
+			inPin connection_21 {
+				bendpoints (0, 10), (330, 10)
+			}
+		}
+	}
+	simpleIdentifier resources.DriverMessages.on at (611, 155) {
+		label at (0, -1)
+		inPin connection_12 {
+			bendpoints (110, 0)
+		}
+		sequenceCall {
+			inPin connection_11 {
+				bendpoints (0, 130)
+			}
+		}
+	}
+	simpleIdentifier resources.CarMessages.v at (181, 35) {
+		label at (0, -1)
+		outPin {
+			connection_9
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier mysoll at (211, 95) {
+		label at (0, -1)
+		outPin {
+			connection_10
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	greater at (321, 66) {
+		inPin connection_9 {
+			bendpoints (100, 0)
+		}
+		inPin connection_10 {
+			bendpoints (70, 0)
+		}
+		outPin {
+			connection_14
+		}
+	}
+	literal Boolean "true" at (451, 143) size (49, 0) {
+		label at (0, 4)
+		outPin {
+			connection_12
+		}
+	}
+	complexIdentifier EdgeRising_instance at (461, -19) size (3, 3) backgroundColor #ffffff {
+		label at (-190, -9)
+		methodCall SystemLib.Miscellaneous.EdgeRising.compute {
+			argumentPin signal at (left, 1) connection_14 {
+				bendpoints (90, 0)
+			}
+			sequenceCall at (-10, -44) {
+				inPin connection_13 {
+					bendpoints (0, -190), (40, -190), (40, -220)
+				}
+			}
+		}
+		methodCall SystemLib.Miscellaneous.EdgeRising.value {
+			returnPin at (right, 1) {
+				connection_18
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+	if at (531, 1) {
+		inPin connection_18 {
+			bendpoints (30, 0)
+		}
+		ifControlFlowOutPin {
+			connection_11, connection_24
+		}
+		sequenceCall {
+			inPin connection_17 {
+				bendpoints (0, -70), (140, -70)
+			}
+		}
+	}
+	literal Numeric "100.0" at (491, 173) size (49, 0) {
+		label at (0, 4)
+		outPin {
+			connection_20
+		}
+	}
+	literal unit resources.kmh "70.0" at (611, 303) size (49, 0) {
+		label at (0, 4)
+		outPin {
+			connection_22
+		}
+	}
+	complexIdentifier StopWatch_instance at (271, 491) size (6, 4) backgroundColor #ffffff {
+		label at (0, 1)
+		methodCall SystemLib.CounterTimer.StopWatch.value {
+			returnPin at (right, 1) {
+				connection_27
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+		methodCall SystemLib.CounterTimer.StopWatch.compute {
+			methodVoidPin at (left, 1) sequenceCall at (-60, -34) {
+				inPin connection_23 {
+					bendpoints (0, 40), (-180, 40)
+				}
+			}
+		}
+		methodCall SystemLib.CounterTimer.StopWatch.reset {
+			methodVoidPin at (bottom, 2) sequenceCall at (-14, 21) {
+				inPin connection_24 {
+					bendpoints (0, 460), (-400, 460), (-400, 550)
+				}
+			}
+		}
+	}
+	greater at (501, 506) {
+		inPin connection_27
+		inPin connection_28
+		outPin {
+			connection_36
+		}
+	}
+	literal Numeric "2.0" at (441, 523) size (49, 0) {
+		label at (0, 4)
+		outPin {
+			connection_28
+		}
+	}
+	simpleIdentifier resources.DriverMessages.brake at (771, 455) {
+		label at (0, -1)
+		inPin connection_32 {
+			bendpoints (40, 0)
+		}
+		sequenceCall {
+			inPin connection_31 {
+				bendpoints (130, 0)
+			}
+		}
+	}
+	literal Numeric "10.0" at (681, 483) size (49, 0) {
+		label at (0, 4)
+		outPin {
+			connection_32
+		}
+	}
+	if at (581, 511) {
+		inPin connection_37 {
+			bendpoints (20, 0)
+		}
+		ifControlFlowOutPin {
+			connection_31
+		}
+		sequenceCall {
+			inPin connection_33 {
+				bendpoints (190, 0)
+			}
+		}
+	}
+	complexIdentifier R at (521, 661) size (3, 3) backgroundColor #ffffff {
+		label at (0, 1)
+		methodCall SystemLib.Miscellaneous.EdgeRising.compute {
+			argumentPin signal at (left, 1) connection_36 {
+				bendpoints (0, 60), (-40, 60), (-40, 160)
+			}
+			sequenceCall at (-90, -24) {
+				inPin connection_35 {
+					bendpoints (40, 0)
+				}
+			}
+		}
+		methodCall SystemLib.Miscellaneous.EdgeRising.value {
+			returnPin at (right, 1) {
+				connection_37
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+}

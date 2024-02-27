@@ -1,0 +1,115 @@
+classType myCar.Regler
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active {
+			connection_7
+		}
+	}
+	simpleIdentifier pow at (551, 115) {
+		label at (0, -1)
+		inPin connection_10 {
+			bendpoints (140, 0)
+		}
+		outPin sequenceCall {
+			inPin connection_9 {
+				bendpoints (0, -160)
+			}
+		}
+	}
+	simpleIdentifier bra at (551, 175) {
+		label at (0, -1)
+		inPin connection_12 {
+			bendpoints (90, 0)
+		}
+		outPin sequenceCall {
+			inPin connection_11 {
+				bendpoints (0, -100)
+			}
+		}
+	}
+	less at (341, 246) {
+		inPin connection_21 {
+			bendpoints (90, 0)
+		}
+		inPin connection_22 {
+			bendpoints (70, 0)
+		}
+		outPin {
+			connection_8
+		}
+	}
+	ifElse at (421, 251) {
+		inPin connection_8
+		ifControlFlowOutPin {
+			connection_11, connection_9
+		}
+		elseControlFlowOutPin {
+			connection_19, connection_17
+		}
+		sequenceCall {
+			inPin connection_7
+		}
+	}
+	literal Numeric "100.0" at (361, 103) size (49, 0) {
+		label at (0, 4)
+		outPin {
+			connection_10
+		}
+	}
+	literal Numeric "0.0" at (411, 183) size (49, 0) {
+		label at (0, 4)
+		outPin {
+			connection_12
+		}
+	}
+	literal Numeric "100.0" at (401, 333) size (49, 0) {
+		label at (0, 4)
+		outPin {
+			connection_20
+		}
+	}
+	literal Numeric "0.0" at (451, 413) size (49, 0) {
+		label at (0, 4)
+		outPin {
+			connection_18
+		}
+	}
+	simpleIdentifier bra at (611, 355) {
+		label at (0, -1)
+		inPin connection_20 {
+			bendpoints (160, 0)
+		}
+		outPin sequenceCall {
+			inPin connection_19 {
+				bendpoints (160, 0)
+			}
+		}
+	}
+	simpleIdentifier pow at (601, 415) {
+		label at (0, -1)
+		inPin connection_18
+		outPin sequenceCall {
+			inPin connection_17 {
+				bendpoints (150, 0)
+			}
+		}
+	}
+	methodArgumentIdentifier calc.v at (211, 195) {
+		label at (0, -1)
+		outPin {
+			connection_21
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier calc.soll at (231, 275) {
+		label at (0, -1)
+		outPin {
+			connection_22
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+}

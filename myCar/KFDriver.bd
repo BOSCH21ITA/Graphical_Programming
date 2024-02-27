@@ -1,0 +1,178 @@
+classType myCar.KFDriver
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active {
+			connection_1, connection_5, connection_15, connection_17, connection_19, connection_21
+		}
+	}
+	simpleIdentifier power at (341, 131) {
+		label at (0, 1)
+		inPin connection_7 {
+			bendpoints (50, 0), (50, 10)
+		}
+		outPin {
+			connection_18
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	complexIdentifier SW at (161, 121) size (6, 4) backgroundColor #ffffff {
+		label at (0, 1)
+		methodCall SystemLib.CounterTimer.StopWatch.value {
+			returnPin at (right, 1) {
+				connection_7, connection_8, connection_11, connection_12, connection_3
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+		methodCall SystemLib.CounterTimer.StopWatch.compute {
+			methodVoidPin at (left, 1) sequenceCall at (-70, -30) {
+				inPin connection_1
+			}
+		}
+		methodCall SystemLib.CounterTimer.StopWatch.reset {
+			methodVoidPin at (bottom, 2) sequenceCall at (-14, 21) {
+				inPin connection_2 {
+					bendpoints (-230, 0)
+				}
+			}
+		}
+	}
+	simpleIdentifier duration at (221, 255) {
+		label at (10, 9)
+		outPin {
+			connection_4
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	greater at (281, 196) {
+		inPin connection_3 {
+			bendpoints (50, 0)
+		}
+		inPin connection_4 {
+			bendpoints (0, -40)
+		}
+		outPin {
+			connection_6
+		}
+	}
+	if at (351, 331) {
+		inPin connection_6 {
+			bendpoints (130, 0), (130, 130)
+		}
+		ifControlFlowOutPin {
+			connection_2
+		}
+		sequenceCall {
+			inPin connection_5
+		}
+	}
+	simpleIdentifier on at (541, 171) {
+		label at (0, 1)
+		inPin connection_8 {
+			bendpoints (50, 0), (50, 10), (70, 10), (70, 50)
+		}
+		outPin {
+			connection_10
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	greater at (741, 226) {
+		inPin connection_10 {
+			bendpoints (140, 0)
+		}
+		inPin connection_9 {
+			bendpoints (30, 0)
+		}
+		outPin {
+			connection_16
+		}
+	}
+	literal Numeric "1.0" at (661, 253) size (49, 0) {
+		label at (0, 4)
+		outPin {
+			connection_9
+		}
+	}
+	simpleIdentifier brake at (581, 331) {
+		label at (0, 1)
+		inPin connection_11 {
+			bendpoints (50, 0), (50, 10), (70, 10), (70, 50), (280, 50), (280, 210)
+		}
+		outPin {
+			connection_20
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier soll at (531, 441) {
+		label at (0, 1)
+		inPin connection_12 {
+			bendpoints (50, 0), (50, 10), (70, 10), (70, 50), (280, 50), (280, 210), (300, 210)
+		}
+		outPin {
+			connection_13
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	multiplication at (631, 476) {
+		inPin connection_13 {
+			bendpoints (40, 0)
+		}
+		inPin connection_14 {
+			bendpoints (40, 0)
+		}
+		outPin {
+			connection_22
+		}
+	}
+	literal unit resources.kmh "1.0" at (541, 513) size (49, 0) {
+		label at (0, 4)
+		outPin {
+			connection_14
+		}
+	}
+	simpleIdentifier resources.DriverMessages.power at (511, 145) {
+		label at (-30, 9)
+		inPin connection_18
+		sequenceCall {
+			inPin connection_17
+		}
+	}
+	simpleIdentifier resources.DriverMessages.on at (831, 315) {
+		label at (0, -1)
+		inPin connection_16 {
+			bendpoints (0, 80)
+		}
+		sequenceCall {
+			inPin connection_15
+		}
+	}
+	simpleIdentifier resources.DriverMessages.brake at (761, 415) {
+		label at (0, -1)
+		inPin connection_20 {
+			bendpoints (120, 0)
+		}
+		sequenceCall {
+			inPin connection_19
+		}
+	}
+	simpleIdentifier resources.DriverMessages.soll at (821, 465) {
+		label at (0, -1)
+		inPin connection_22 {
+			bendpoints (150, 0)
+		}
+		sequenceCall {
+			inPin connection_21
+		}
+	}
+}
