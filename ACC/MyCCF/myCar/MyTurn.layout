@@ -1,4 +1,4 @@
-Component         myCar.MyTurn size ( 14 , 8 ) {
+Component         MyCCF.myCar.MyTurn size ( 14 , 8 ) {
 	labelPosition ( 0 , 1 )
 	methodLayout move {
 		pin beta ( Left , 3 )

@@ -1,4 +1,4 @@
-package resources;
+package MyCCF.resources;
 
 type curve_real is table real -> real;
 type curve_real_a is table real -> a;

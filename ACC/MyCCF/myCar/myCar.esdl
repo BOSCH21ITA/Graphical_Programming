@@ -1,9 +1,9 @@
-package myCar;
+package MyCCF.myCar;
 
-import resources.CarMessages;
-import resources.a;
+import MyCCF.resources.CarMessages;
+import MyCCF.resources.a;
 import SystemLib.Miscellaneous.DeltaTimeService;
-import resources.s;
+import MyCCF.resources.s;
 
 static class myCar
 reads CarMessages.steering, CarMessages.power, CarMessages.brake
@@ -13,7 +13,7 @@ writes CarMessages.v, CarMessages.x, CarMessages.y, CarMessages.bearing {
 	characteristic a g = 9.81[a];
 
 	@thread
-	@generated("blockdiagram", "88dadad1")
+	@generated("blockdiagram", "f8c1693c")
 	public void calc() {
 		myVehicle.move(CarMessages.power, CarMessages.brake, (DeltaTimeService.deltaT * 1.0[s]), g, CarMessages.steering); // Main/calc 1
 		CarMessages.v = myVehicle.v; // Main/calc 2

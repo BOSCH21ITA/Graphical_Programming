@@ -1,10 +1,10 @@
-package myCar;
+package MyCCF.myCar;
 import SystemLib.Math.MathLib;
-import resources.kmh;
-import resources.m;
-import resources.s;
+import MyCCF.resources.kmh;
+import MyCCF.resources.m;
+import MyCCF.resources.s;
 
-singleton class MyTurn {
+class MyTurn {
 	@get
 	m x = 0.0 [m];
 	@get

@@ -1,4 +1,4 @@
-package resources;
+package MyCCF.resources;
 
 data interface CarMessages {
 	@a2l_unit_label("km/h")
