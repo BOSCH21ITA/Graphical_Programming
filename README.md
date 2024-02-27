@@ -1,5 +1,12 @@
 # Graphical_Programming
 
+## Block Diagrams
+- myCar: Niklas
+- myDrive: Niklas
+- Control
+- Driver
+- ACC
+
 ## Important Links
 [Spreadsheet](https://docs.google.com/spreadsheets/d/1CeqIHEToCErb2FADDdlFT0qnuE4hoavrG2SsdzxbBKg/edit?pli=1#gid=417476604)
 
