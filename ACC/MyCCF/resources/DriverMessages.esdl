@@ -7,4 +7,5 @@ data interface DriverMessages {
 	boolean display = false; 
 	boolean increment = false;
 	boolean decrement = false;
+	kmh soll = 40.0 [kmh];
 }
