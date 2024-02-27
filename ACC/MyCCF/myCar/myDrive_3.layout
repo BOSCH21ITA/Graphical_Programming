@@ -1,4 +1,4 @@
-Component         myCar.myDrive_3 size ( 38 , 14 ) backgroundColor #ffffff {
+Component         MyCCF.myCar.myDrive_3 size ( 38 , 14 ) backgroundColor #ffffff {
 	labelPosition ( -10 , 1 )
 	methodLayout move {
 		pin powerCtrl ( Left , 2 )

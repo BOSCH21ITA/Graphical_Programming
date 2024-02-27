@@ -1,0 +1,24 @@
+classType MyCCF.myCar.Driver
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active {
+			connection_1
+		}
+	}
+	simpleIdentifier controlACC at (391, 75) {
+		label at (0, -1)
+		outPin {
+			connection_2
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier MyCCF.resources.DriverMessages.on at (641, 75) {
+		label at (0, -1)
+		inPin connection_2
+		sequenceCall {
+			inPin connection_1
+		}
+	}
+}

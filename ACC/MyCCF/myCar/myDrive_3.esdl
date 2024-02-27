@@ -1,14 +1,14 @@
-package myCar;
+package MyCCF.myCar;
 
-import resources.curve_kmh;
-import resources.curve_m;
-import resources.curve_real_a;
-import resources.map_real_kmh;
-import resources.m;
-import resources.s;
-import resources.kmh;
-import resources.g;
-import resources.a;
+import MyCCF.resources.curve_kmh;
+import MyCCF.resources.curve_m;
+import MyCCF.resources.curve_real_a;
+import MyCCF.resources.map_real_kmh;
+import MyCCF.resources.m;
+import MyCCF.resources.s;
+import MyCCF.resources.kmh;
+import MyCCF.resources.g;
+import MyCCF.resources.a;
 
 class myDrive_3 {
 
@@ -79,7 +79,7 @@ class myDrive_3 {
 	@get
 	real bearing;
 
-	@generated("blockdiagram", "fab14642")
+	@generated("blockdiagram", "ad856c7a")
 	public void move(real in powerCtrl, real in brakeCtrl, s in mydt, g in myg, real in ^delta) {
 		if (dist > TrackSize) {
 			dist = 0.0[m]; // Main/move 1/if-then 1

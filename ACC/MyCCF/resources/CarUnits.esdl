@@ -1,4 +1,4 @@
-package resources;
+package MyCCF.resources;
 
 unit m;  // meter
 unit s;  // second
