@@ -2,130 +2,282 @@ classType MyCCF.tests.TestDriverONOFFDISPLAY
 blockdiagramSpecification Main {
 	methodBody calc {
 		outPin active {
-			connection_11, connection_20, connection_25, connection_32
+			connection_47, connection_58, connection_63, connection_73, connection_78, connection_80
 		}
 	}
-	simpleIdentifier begin at (101, 55) {
+	simpleIdentifier MyCCF.resources.DriverMessages.display at (721, 585) {
 		label at (0, -1)
-		inPin outPin {
-			connection_33
+		outPin {
+			connection_61
 		}
 		sequenceCall {
 			inPin
 		}
 	}
-	simpleIdentifier MyCCF.resources.DriverMessages.display at (101, 275) {
+	simpleIdentifier MyCCF.resources.DriverMessages.on at (1281, 285) {
 		label at (0, -1)
-		outPin {
-			connection_1
-		}
+		inPin connection_48
 		sequenceCall {
-			inPin
+			inPin connection_47
 		}
 	}
-	equal at (371, 256) {
-		inPin connection_34
-		inPin connection_1
-		outPin {
-			connection_12
-		}
-	}
-	literal Boolean "false" at (121, 453) size (49, 0) {
-		label at (0, 4)
-		outPin {
-			connection_16
-		}
-	}
-	literal Boolean "true" at (121, 393) size (49, 0) {
-		label at (0, 4)
-		outPin {
-			connection_18
-		}
-	}
-	simpleIdentifier MyCCF.resources.DriverMessages.on at (371, 165) {
-		label at (0, -1)
-		inPin connection_26 {
-			bendpoints (0, 10)
-		}
-		sequenceCall {
-			inPin connection_25
-		}
-	}
-	ifElse at (201, 331) {
-		inPin connection_12 {
-			bendpoints (0, 40), (-300, 40), (-300, 70)
-		}
-		ifControlFlowOutPin {
-			connection_17
-		}
-		elseControlFlowOutPin {
-			connection_15
-		}
-		sequenceCall {
-			inPin connection_11
-		}
-	}
-	simpleIdentifier MyCCF.resources.TestMessages.testONOFFDISPLAYGood at (341, 395) {
-		label at (0, -1)
-		inPin connection_18
-		sequenceCall {
-			inPin connection_17 {
-				bendpoints (20, 0), (20, 40)
-			}
-		}
-	}
-	simpleIdentifier MyCCF.resources.TestMessages.testONOFFDISPLAYGood at (341, 455) {
-		label at (0, -1)
-		inPin connection_16
-		sequenceCall {
-			inPin connection_15 {
-				bendpoints (0, 70)
-			}
-		}
-	}
-	complexIdentifier CountDown_instance at (111, 151) size (5, 3) backgroundColor #ffffff {
+	complexIdentifier StopWatch_instance_2 at (501, 221) size (6, 4) backgroundColor #ffffff {
 		label at (0, 1)
-		methodCall SystemLib.CounterTimer.CountDown.compute {
-			methodVoidPin at (left, 1) sequenceCall at (-80, 6) {
-				inPin connection_20
+		methodCall SystemLib.CounterTimer.StopWatch.value {
+			returnPin at (right, 1) {
+				connection_49, connection_55, connection_77, connection_44
 			}
-		}
-		methodCall SystemLib.CounterTimer.CountDown.value {
-			returnPin at (right, 0) {
-				connection_26
-			}
-			sequenceCall at (0, 0) {
+			sequenceCall {
 				inPin
 			}
 		}
-		methodCall SystemLib.CounterTimer.CountDown.begin {
-			argumentPin startValue at (left, 0) connection_31
-			sequenceCall at (0, -54) {
-				inPin connection_30 {
-					bendpoints (0, 30), (-170, 30)
+		methodCall SystemLib.CounterTimer.StopWatch.compute {
+			methodVoidPin at (left, 1) sequenceCall at (-70, -30) {
+				inPin connection_35 {
+					bendpoints (140, 0)
+				}
+			}
+		}
+		methodCall SystemLib.CounterTimer.StopWatch.reset {
+			methodVoidPin at (top, 0) sequenceCall at (-14, -36) {
+				inPin connection_40 {
+					bendpoints (0, 100), (240, 100)
 				}
 			}
 		}
 	}
-	literal Numeric "5" at (31, 153) size (49, 0) {
-		label at (0, 4)
+	simpleIdentifier c at (141, 55) {
+		label at (0, -1)
 		outPin {
-			connection_31
-		}
-	}
-	if at (221, 51) {
-		inPin connection_33
-		ifControlFlowOutPin {
-			connection_30
+			connection_81
 		}
 		sequenceCall {
-			inPin connection_32
+			inPin
 		}
 	}
-	literal Boolean "false" at (101, 253) size (49, 0) {
+	simpleIdentifier curve_real_instance at (711, 221) {
+		label at (0, 1)
+		inPin connection_44
+		outPin {
+			connection_45
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	equal at (881, 276) {
+		inPin connection_45 {
+			bendpoints (110, 0)
+		}
+		inPin connection_46 {
+			bendpoints (80, 0)
+		}
+		outPin {
+			connection_48
+		}
+	}
+	literal Numeric "1.0" at (751, 323) size (49, 0) {
 		label at (0, 4)
 		outPin {
-			connection_34
+			connection_46
+		}
+	}
+	simpleIdentifier curve_real_instance_2 at (711, 401) {
+		label at (0, 1)
+		inPin connection_49 {
+			bendpoints (80, 0), (80, 180)
+		}
+		outPin {
+			connection_50
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	literal Numeric "1.0" at (721, 553) size (49, 0) {
+		label at (0, 4)
+		outPin {
+			connection_51
+		}
+	}
+	equal at (891, 476) {
+		inPin connection_50 {
+			bendpoints (120, 0)
+		}
+		inPin connection_51 {
+			bendpoints (120, 0)
+		}
+		outPin {
+			connection_59
+		}
+	}
+	simpleIdentifier curve_real_instance_3 at (711, 641) {
+		label at (0, 1)
+		inPin connection_55 {
+			bendpoints (80, 0), (80, 420)
+		}
+		outPin {
+			connection_62
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier testOn at (1031, 585) {
+		label at (0, -1)
+		inPin connection_61
+		outPin {
+			connection_69
+		}
+		sequenceCall {
+			inPin connection_60 {
+				bendpoints (0, 80)
+			}
+		}
+	}
+	if at (941, 481) {
+		inPin connection_59
+		ifControlFlowOutPin {
+			connection_60
+		}
+		sequenceCall {
+			inPin connection_58
+		}
+	}
+	equal at (901, 686) {
+		inPin connection_62 {
+			bendpoints (130, 0)
+		}
+		inPin connection_65 {
+			bendpoints (120, 0)
+		}
+		outPin {
+			connection_64
+		}
+	}
+	if at (941, 691) {
+		inPin connection_64
+		ifControlFlowOutPin {
+			connection_67
+		}
+		sequenceCall {
+			inPin connection_63
+		}
+	}
+	simpleIdentifier testOff at (1041, 805) {
+		label at (0, -1)
+		inPin connection_68
+		outPin {
+			connection_70
+		}
+		sequenceCall {
+			inPin connection_67 {
+				bendpoints (0, 90)
+			}
+		}
+	}
+	literal Numeric "1.0" at (731, 743) size (49, 0) {
+		label at (0, 4)
+		outPin {
+			connection_65
+		}
+	}
+	simpleIdentifier MyCCF.resources.DriverMessages.display at (721, 805) {
+		label at (0, -1)
+		outPin {
+			connection_66
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	not at (891, 801) {
+		inPin connection_66
+		outPin {
+			connection_68
+		}
+	}
+	equal at (1151, 696) {
+		inPin connection_69 {
+			bendpoints (0, 110)
+		}
+		inPin connection_70 {
+			bendpoints (0, -90)
+		}
+		outPin {
+			connection_71
+		}
+	}
+	equal at (1241, 736) {
+		inPin connection_71 {
+			bendpoints (50, 0)
+		}
+		inPin connection_72
+		outPin {
+			connection_74
+		}
+	}
+	literal Boolean "true" at (1161, 753) size (49, 0) {
+		label at (0, 4)
+		outPin {
+			connection_72
+		}
+	}
+	simpleIdentifier MyCCF.resources.TestMessages.testONOFFDISPLAYGood at (621, 895) {
+		label at (0, -1)
+		inPin connection_74 {
+			bendpoints (0, 100), (-660, 100)
+		}
+		sequenceCall {
+			inPin connection_73
+		}
+	}
+	simpleIdentifier curve_real_instance_4 at (231, 581) {
+		label at (0, 1)
+		inPin connection_77 {
+			bendpoints (80, 0), (80, 140), (-340, 140)
+		}
+		outPin {
+			connection_75
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	equal at (381, 656) {
+		inPin connection_75 {
+			bendpoints (90, 0)
+		}
+		inPin connection_76 {
+			bendpoints (90, 0)
+		}
+		outPin {
+			connection_79
+		}
+	}
+	literal Numeric "1.0" at (241, 683) size (49, 0) {
+		label at (0, 4)
+		outPin {
+			connection_76
+		}
+	}
+	simpleIdentifier MyCCF.resources.TestMessages.testONOFFDISPLAYDone at (461, 665) {
+		label at (0, -1)
+		inPin connection_79
+		sequenceCall {
+			inPin connection_78
+		}
+	}
+	ifElse at (231, 51) {
+		inPin connection_81
+		ifControlFlowOutPin {
+			connection_35
+		}
+		elseControlFlowOutPin {
+			connection_40
+		}
+		sequenceCall {
+			inPin connection_80
 		}
 	}
 }
