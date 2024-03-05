@@ -12,7 +12,7 @@ blockdiagramSpecification Main {
 			inPin connection_8
 		}
 	}
-	simpleIdentifier MyCCF.resources.DriverMessages.on at (181, 65) {
+	simpleIdentifier MyCCF.resources.DriverMessages.on at (181, 55) {
 		label at (0, -1)
 		outPin {
 			connection_19
@@ -22,25 +22,23 @@ blockdiagramSpecification Main {
 		}
 	}
 	complexIdentifier ACC_instance at (391, 41) size (14, 8) {
-		label at (0, 1)
+		label at (40, 1)
 		methodCall MyCCF.myCar.ACC.aCCStatemachineTrigger {
-			methodVoidPin at (top, 0) sequenceCall at (-14, -34) {
+			methodVoidPin at (top, 0) sequenceCall at (-14, -30) {
 				inPin connection_3
 			}
 		}
 		elementCall (MyCCF.myCar.ACC.brake) {
-			argumentPin at (left, 0) connection_7 {
-				bendpoints (90, 0), (90, -220)
+			argumentPin at (left, 6) connection_7 {
+				bendpoints (80, 0), (80, -50)
 			}
-			sequenceCall {
+			sequenceCall at (-40, 6) {
 				inPin connection_6
 			}
 		}
 		elementCall (MyCCF.myCar.ACC.on) {
-			argumentPin at (left, 1) connection_17 {
-				bendpoints (60, 0)
-			}
-			sequenceCall {
+			argumentPin at (left, 1) connection_17
+			sequenceCall at (-30, -24) {
 				inPin connection_16
 			}
 		}
@@ -53,7 +51,7 @@ blockdiagramSpecification Main {
 			}
 		}
 	}
-	simpleIdentifier MyCCF.resources.DriverMessages.brake at (131, 265) {
+	simpleIdentifier MyCCF.resources.DriverMessages.brake at (151, 155) {
 		label at (0, -1)
 		outPin {
 			connection_13, connection_7
@@ -62,7 +60,7 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier MyCCF.resources.DriverMessages.power at (131, 315) {
+	simpleIdentifier MyCCF.resources.DriverMessages.power at (151, 205) {
 		label at (0, -1)
 		outPin {
 			connection_11
@@ -71,21 +69,21 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-	simpleIdentifier MyCCF.resources.CarMessages.brake at (681, 265) {
+	simpleIdentifier MyCCF.resources.CarMessages.brake at (701, 155) {
 		label at (0, -1)
 		inPin connection_13
 		sequenceCall {
 			inPin connection_12 {
-				bendpoints (0, 130)
+				bendpoints (100, 0)
 			}
 		}
 	}
-	simpleIdentifier MyCCF.resources.CarMessages.power at (681, 315) {
+	simpleIdentifier MyCCF.resources.CarMessages.power at (701, 205) {
 		label at (0, -1)
 		inPin connection_11
 		sequenceCall {
 			inPin connection_10 {
-				bendpoints (0, 180)
+				bendpoints (0, 70)
 			}
 		}
 	}
@@ -103,11 +101,11 @@ blockdiagramSpecification Main {
 			inPin connection_14
 		}
 	}
-	complexIdentifier EdgeRising_instance at (281, 51) size (3, 3) backgroundColor #ffffff {
-		label at (0, 1)
+	complexIdentifier EdgeRising_instance at (301, 41) size (3, 3) backgroundColor #ffffff {
+		label at (-40, 1)
 		methodCall SystemLib.Miscellaneous.EdgeRising.compute {
 			argumentPin signal at (left, 1) connection_19
-			sequenceCall at (-60, -28) {
+			sequenceCall at (-40, -24) {
 				inPin connection_18
 			}
 		}
@@ -120,33 +118,33 @@ blockdiagramSpecification Main {
 			}
 		}
 	}
-	simpleIdentifier MyCCF.resources.CarMessages.brake at (681, 145) {
+	simpleIdentifier MyCCF.resources.CarMessages.brake at (701, 395) {
 		label at (0, -1)
 		inPin connection_23
 		sequenceCall {
 			inPin connection_22 {
-				bendpoints (20, 0), (20, 40)
+				bendpoints (20, 0), (20, 290)
 			}
 		}
 	}
-	literal Numeric "0.0" at (481, 143) size (49, 0) {
+	literal Numeric "0.0" at (501, 393) size (49, 0) {
 		label at (0, 4)
 		outPin {
 			connection_23
 		}
 	}
-	literal Numeric "0.0" at (481, 193) size (49, 0) {
+	literal Numeric "0.0" at (501, 443) size (49, 0) {
 		label at (0, 4)
 		outPin {
 			connection_21
 		}
 	}
-	simpleIdentifier MyCCF.resources.CarMessages.power at (681, 195) {
+	simpleIdentifier MyCCF.resources.CarMessages.power at (701, 445) {
 		label at (0, -1)
 		inPin connection_21
 		sequenceCall {
 			inPin connection_20 {
-				bendpoints (20, 0), (20, 90)
+				bendpoints (20, 0), (20, 340)
 			}
 		}
 	}
