@@ -1,0 +1,37 @@
+classType MyCCF.myCar.Regler
+blockdiagramSpecification calc_spec {
+	methodBody calc {
+		outPin active {
+			LConnection__SPJrcdr6Ee6iDcHmoXU4dA, LConnection__SPJrc9r6Ee6iDcHmoXU4dA
+		}
+	}
+	literal Numeric "0.0" at (161, 63) size (49, 0) {
+		label at (0, 4)
+		outPin {
+			LConnection__SPJrcNr6Ee6iDcHmoXU4dA
+		}
+	}
+	simpleIdentifier bra at (271, 65) {
+		label at (0, -1)
+		inPin LConnection__SPJrcNr6Ee6iDcHmoXU4dA
+		outPin sequenceCall {
+			inPin LConnection__SPJrcdr6Ee6iDcHmoXU4dA
+		}
+	}
+	simpleIdentifier p at (161, 125) {
+		label at (0, -1)
+		outPin {
+			LConnection__SPJrctr6Ee6iDcHmoXU4dA
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier pow at (261, 125) {
+		label at (0, -1)
+		inPin LConnection__SPJrctr6Ee6iDcHmoXU4dA
+		outPin sequenceCall {
+			inPin LConnection__SPJrc9r6Ee6iDcHmoXU4dA
+		}
+	}
+}

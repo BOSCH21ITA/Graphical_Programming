@@ -56,7 +56,7 @@
 		        QP_BLOB 1
 		    /end SOURCE
 		    /begin TP_BLOB
-		         /* programm id */ 883999550
+		         /* programm id */ 884013401
 		         /* target id   */ 7
 		         /*             */ 0 2 0
 		    /end TP_BLOB
@@ -594,6 +594,90 @@
 			/end IF_DATA
 		/end MEASUREMENT
 
+		/begin CHARACTERISTIC MyCCF.myCar.Control.Regler_instance.p
+			/* long identifier    */ ""
+			/* type               */ VALUE
+			/* ecu address        */ 0x0
+			/* record layout      */ STANDARD_VALUE_R32
+			/* max diff value     */ 0.0
+			/* conversion         */ esdl_ident
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			/begin IF_DATA E_TARGET
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 2 1000 0
+			/end IF_DATA
+		/end CHARACTERISTIC
+
+		/begin MEASUREMENT MyCCF.myCar.Control.Regler_instance.pow
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 2 1000 1
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT MyCCF.myCar.Control.Regler_instance.bra
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 2 1000 2
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin CHARACTERISTIC MyCCF.myCar.Control.Regler_instance_2.p
+			/* long identifier    */ ""
+			/* type               */ VALUE
+			/* ecu address        */ 0x0
+			/* record layout      */ STANDARD_VALUE_R32
+			/* max diff value     */ 0.0
+			/* conversion         */ esdl_ident
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			/begin IF_DATA E_TARGET
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 3 1000 0
+			/end IF_DATA
+		/end CHARACTERISTIC
+
+		/begin MEASUREMENT MyCCF.myCar.Control.Regler_instance_2.pow
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 3 1000 1
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT MyCCF.myCar.Control.Regler_instance_2.bra
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 3 1000 2
+			/end IF_DATA
+		/end MEASUREMENT
+
 		/begin MEASUREMENT MyCCF.resources.CarMessages.v
 			/* long identifier    */ ""
 			/* datatype           */ FLOAT32_IEEE
@@ -964,9 +1048,11 @@
 		/begin FUNCTION MyCCF.myCar.Control
 			""
 			/begin IN_MEASUREMENT
+				MyCCF.resources.CarMessages.v
 				MyCCF.resources.DriverMessages.brake
 				MyCCF.resources.DriverMessages.on
 				MyCCF.resources.DriverMessages.power
+				MyCCF.resources.DriverMessages.soll
 			/end IN_MEASUREMENT
 			/begin OUT_MEASUREMENT
 				MyCCF.resources.CarMessages.brake
@@ -976,6 +1062,8 @@
 			/begin SUB_FUNCTION
 				MyCCF.myCar.Control.ACC_instance
 				MyCCF.myCar.Control.EdgeRising_instance
+				MyCCF.myCar.Control.Regler_instance
+				MyCCF.myCar.Control.Regler_instance_2
 			/end SUB_FUNCTION
 		/end FUNCTION
 		/begin FUNCTION MyCCF.myCar.Control.ACC_instance
@@ -992,6 +1080,26 @@
 			/begin LOC_MEASUREMENT
 				MyCCF.myCar.Control.EdgeRising_instance.buffer
 				MyCCF.myCar.Control.EdgeRising_instance.oldSignal
+			/end LOC_MEASUREMENT
+		/end FUNCTION
+		/begin FUNCTION MyCCF.myCar.Control.Regler_instance
+			""
+			/begin DEF_CHARACTERISTIC
+				MyCCF.myCar.Control.Regler_instance.p
+			/end DEF_CHARACTERISTIC
+			/begin LOC_MEASUREMENT
+				MyCCF.myCar.Control.Regler_instance.bra
+				MyCCF.myCar.Control.Regler_instance.pow
+			/end LOC_MEASUREMENT
+		/end FUNCTION
+		/begin FUNCTION MyCCF.myCar.Control.Regler_instance_2
+			""
+			/begin DEF_CHARACTERISTIC
+				MyCCF.myCar.Control.Regler_instance_2.p
+			/end DEF_CHARACTERISTIC
+			/begin LOC_MEASUREMENT
+				MyCCF.myCar.Control.Regler_instance_2.bra
+				MyCCF.myCar.Control.Regler_instance_2.pow
 			/end LOC_MEASUREMENT
 		/end FUNCTION
 
@@ -1020,6 +1128,8 @@
 			/begin SUB_GROUP
 				MyCCF.myCar.Control.ACC_instance
 				MyCCF.myCar.Control.EdgeRising_instance
+				MyCCF.myCar.Control.Regler_instance
+				MyCCF.myCar.Control.Regler_instance_2
 			/end SUB_GROUP
 		/end GROUP
 		/begin GROUP MyCCF.myCar.Control.ACC_instance
@@ -1036,6 +1146,26 @@
 			/begin REF_MEASUREMENT
 				MyCCF.myCar.Control.EdgeRising_instance.buffer
 				MyCCF.myCar.Control.EdgeRising_instance.oldSignal
+			/end REF_MEASUREMENT
+		/end GROUP
+		/begin GROUP MyCCF.myCar.Control.Regler_instance
+			""
+			/begin REF_CHARACTERISTIC
+				MyCCF.myCar.Control.Regler_instance.p
+			/end REF_CHARACTERISTIC
+			/begin REF_MEASUREMENT
+				MyCCF.myCar.Control.Regler_instance.bra
+				MyCCF.myCar.Control.Regler_instance.pow
+			/end REF_MEASUREMENT
+		/end GROUP
+		/begin GROUP MyCCF.myCar.Control.Regler_instance_2
+			""
+			/begin REF_CHARACTERISTIC
+				MyCCF.myCar.Control.Regler_instance_2.p
+			/end REF_CHARACTERISTIC
+			/begin REF_MEASUREMENT
+				MyCCF.myCar.Control.Regler_instance_2.bra
+				MyCCF.myCar.Control.Regler_instance_2.pow
 			/end REF_MEASUREMENT
 		/end GROUP
 		/begin GROUP MyCCF.myCar.Driver
