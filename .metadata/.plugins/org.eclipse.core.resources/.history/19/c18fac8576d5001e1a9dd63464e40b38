@@ -1,0 +1,6 @@
+classType MyCCF.tests.TestDriverONOFFDISPLAY
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active
+	}
+}

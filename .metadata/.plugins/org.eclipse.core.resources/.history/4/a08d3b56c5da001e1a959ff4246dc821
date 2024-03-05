@@ -1,0 +1,149 @@
+classType MyCCF.tests.TestDriverONOFFDISPLAY
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active {
+			connection_11, connection_20, connection_25, connection_32, connection_35, connection_36
+		}
+	}
+	simpleIdentifier begin at (101, 55) {
+		label at (0, -1)
+		inPin outPin {
+			connection_33
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier MyCCF.resources.DriverMessages.display at (101, 275) {
+		label at (0, -1)
+		outPin {
+			connection_1
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	equal at (371, 256) {
+		inPin connection_34
+		inPin connection_1
+		outPin {
+			connection_12
+		}
+	}
+	literal Boolean "false" at (121, 453) size (49, 0) {
+		label at (0, 4)
+		outPin {
+			connection_16
+		}
+	}
+	literal Boolean "true" at (121, 393) size (49, 0) {
+		label at (0, 4)
+		outPin {
+			connection_18
+		}
+	}
+	simpleIdentifier MyCCF.resources.DriverMessages.on at (371, 165) {
+		label at (0, -1)
+		inPin connection_26 {
+			bendpoints (0, 10)
+		}
+		sequenceCall {
+			inPin connection_25
+		}
+	}
+	ifElse at (201, 331) {
+		inPin connection_12 {
+			bendpoints (0, 40), (-300, 40), (-300, 70)
+		}
+		ifControlFlowOutPin {
+			connection_17
+		}
+		elseControlFlowOutPin {
+			connection_15
+		}
+		sequenceCall {
+			inPin connection_11
+		}
+	}
+	simpleIdentifier MyCCF.resources.TestMessages.testONOFFDISPLAYGood at (341, 395) {
+		label at (0, -1)
+		inPin connection_18
+		sequenceCall {
+			inPin connection_17 {
+				bendpoints (20, 0), (20, 40)
+			}
+		}
+	}
+	simpleIdentifier MyCCF.resources.TestMessages.testONOFFDISPLAYGood at (341, 455) {
+		label at (0, -1)
+		inPin connection_16
+		sequenceCall {
+			inPin connection_15 {
+				bendpoints (0, 70)
+			}
+		}
+	}
+	complexIdentifier CountDown_instance at (111, 151) size (5, 3) backgroundColor #ffffff {
+		label at (0, 1)
+		methodCall SystemLib.CounterTimer.CountDown.compute {
+			methodVoidPin at (left, 1) sequenceCall at (-80, 6) {
+				inPin connection_20
+			}
+		}
+		methodCall SystemLib.CounterTimer.CountDown.value {
+			returnPin at (right, 0) {
+				connection_26
+			}
+			sequenceCall at (0, 0) {
+				inPin
+			}
+		}
+		methodCall SystemLib.CounterTimer.CountDown.begin {
+			argumentPin startValue at (left, 0) connection_31
+			sequenceCall at (0, -54) {
+				inPin connection_30 {
+					bendpoints (0, 30), (-170, 30)
+				}
+			}
+		}
+	}
+	literal Numeric "5" at (31, 153) size (49, 0) {
+		label at (0, 4)
+		outPin {
+			connection_31
+		}
+	}
+	if at (221, 51) {
+		inPin connection_33
+		ifControlFlowOutPin {
+			connection_30
+		}
+		sequenceCall {
+			inPin connection_32
+		}
+	}
+	literal Boolean "false" at (101, 253) size (49, 0) {
+		label at (0, 4)
+		outPin {
+			connection_34
+		}
+	}
+	complexIdentifier StopWatch_instance at (541, 271) size (6, 4) backgroundColor #ffffff {
+		label at (0, 11)
+		methodCall SystemLib.CounterTimer.StopWatch.value {
+			returnPin at (right, 1) sequenceCall {
+				inPin
+			}
+		}
+		methodCall SystemLib.CounterTimer.StopWatch.compute {
+			methodVoidPin at (left, 1) sequenceCall at (-70, -30) {
+				inPin connection_35
+			}
+		}
+		methodCall SystemLib.CounterTimer.StopWatch.reset {
+			methodVoidPin at (bottom, 2) sequenceCall at (-14, 21) {
+				inPin connection_36
+			}
+		}
+	}
+}

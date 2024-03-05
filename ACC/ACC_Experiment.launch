@@ -7,7 +7,7 @@
     <booleanAttribute key="com.etas.ascet.build.asap2.skip.entry.class.nodes" value="false"/>
     <booleanAttribute key="com.etas.ascet.build.asap2.use.element.unit.for.formula" value="true"/>
     <stringAttribute key="com.etas.ascet.build.buildSettingsPath" value="${project_loc}/build_settings.mk"/>
-    <stringAttribute key="com.etas.ascet.build.codeGenerator.name" value="SERVERCETASASCET-DEVELOPER7.9"/>
+    <stringAttribute key="com.etas.ascet.build.codeGenerator.name" value="SERVERDETASASCET-DEVELOPER7.9"/>
     <stringAttribute key="com.etas.ascet.build.codeGenerator.version" value="6.4.7"/>
     <stringAttribute key="com.etas.ascet.build.compiler.defines" value="ESDL_CCODE_TARGET_VARIANT_PC ESDL_CCODE_GENERATOR_VARIANT_OBJECT ESDL_LOGGING_ENABLED"/>
     <stringAttribute key="com.etas.ascet.build.compiler.inlineDirective" value="static inline"/>

@@ -1,0 +1,12 @@
+classType MyCCF.tests.TestDriverONOFFDISPLAY
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active
+	}
+	simpleIdentifier begin at (151, 145) {
+		label at (0, -1)
+		inPin outPin sequenceCall {
+			inPin
+		}
+	}
+}

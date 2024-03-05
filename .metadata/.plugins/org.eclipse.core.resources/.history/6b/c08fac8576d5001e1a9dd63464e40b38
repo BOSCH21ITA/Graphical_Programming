@@ -1,0 +1,8 @@
+package MyCCF.tests;
+
+class TestDriverONOFFDISPLAY {
+
+	@generated("blockdiagram", "78800a5b")
+	public void calc() {
+	}
+}

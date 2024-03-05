@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.1046017976/MINGW_HOME/delimiter=;
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.1046017976/MINGW_HOME/operation=replace
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.1046017976/MINGW_HOME/value=${mingw_gcc_home}
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.1046017976/PATH/delimiter=;
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.1046017976/PATH/operation=prepend
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.1046017976/PATH/value=D\:\\ETAS\\ASCET-DEVELOPER7.9\\plugins\\org.gnu.make.win32.x86_3.81.1.1\\tools
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.1046017976/append=true
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.1046017976/appendContributed=true

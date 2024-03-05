@@ -1,0 +1,6 @@
+package MyCCF.resources;
+
+data interface TestONOFFDISPLAYMessages {
+	boolean testDone = false;
+	boolean testGood = false;
+}

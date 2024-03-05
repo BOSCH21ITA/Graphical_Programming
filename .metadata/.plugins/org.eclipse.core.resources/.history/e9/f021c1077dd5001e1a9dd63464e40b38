@@ -1,0 +1,11 @@
+package MyCCF.tests;
+
+class TestDriverONOFFDISPLAY {
+
+	characteristic real ^start = 0.0;
+	integer begin;
+
+	@generated("blockdiagram", "f3891937")
+	public void calc() {
+	}
+}

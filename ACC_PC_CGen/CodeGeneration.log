@@ -1,0 +1,88 @@
+[INFO]  [ACC_Experiment] [14:34:20] Output folder: D:\Graphical_Programming\ACC_PC_CGen
+[INFO]  [ACC_Experiment] [14:34:20] Starting code generation ...
+[INFO]  [ACC_Experiment] [14:34:20] Model dependency analysis                  (took:  0.245 s)
+[INFO]  [ACC_Experiment] [14:34:20] Validating generation resources            (took:  0.034 s)
+[INFO]  [ACC_Experiment] [14:34:21] Intermediate code generation               (took:  0.363 s)
+[INFO]  [ACC_Experiment] [14:34:21] C code pre-processing                      (took:  0.000 s)
+[INFO]  [ACC_Experiment] [14:34:30] ASCET code generator connected             (took:  8.733 s)
+[INFO]  [ACC_Experiment] [14:34:35] C code generation                          (took: 14.612 s)
+[INFO]  [ACC_Experiment] [14:34:40] C code post-processing                     (took:  4.672 s)
+[INFO]  [ACC_Experiment] [14:34:40] [IMdl93] method <acos> not used in this project [SystemLib_Math_MathLib>>R64]
+[INFO]  [ACC_Experiment] [14:34:40] [IMdl93] method <asin> not used in this project [SystemLib_Math_MathLib>>R64]
+[INFO]  [ACC_Experiment] [14:34:40] [IMdl93] method <atan> not used in this project [SystemLib_Math_MathLib>>R64]
+[INFO]  [ACC_Experiment] [14:34:40] [IMdl93] method <atan2> not used in this project [SystemLib_Math_MathLib>>R64]
+[INFO]  [ACC_Experiment] [14:34:40] [IMdl93] method <ceil> not used in this project [SystemLib_Math_MathLib>>R64]
+[INFO]  [ACC_Experiment] [14:34:40] [IMdl93] method <cosh> not used in this project [SystemLib_Math_MathLib>>R64]
+[INFO]  [ACC_Experiment] [14:34:40] [IMdl93] method <exp> not used in this project [SystemLib_Math_MathLib>>R64]
+[INFO]  [ACC_Experiment] [14:34:40] [IMdl93] method <floor> not used in this project [SystemLib_Math_MathLib>>R64]
+[INFO]  [ACC_Experiment] [14:34:40] [IMdl93] method <log> not used in this project [SystemLib_Math_MathLib>>R64]
+[INFO]  [ACC_Experiment] [14:34:40] [IMdl93] method <log10> not used in this project [SystemLib_Math_MathLib>>R64]
+[INFO]  [ACC_Experiment] [14:34:40] [IMdl93] method <pow> not used in this project [SystemLib_Math_MathLib>>R64]
+[INFO]  [ACC_Experiment] [14:34:40] [IMdl93] method <sinh> not used in this project [SystemLib_Math_MathLib>>R64]
+[INFO]  [ACC_Experiment] [14:34:40] [IMdl93] method <sqrt> not used in this project [SystemLib_Math_MathLib>>R64]
+[INFO]  [ACC_Experiment] [14:34:40] [IMdl93] method <tanh> not used in this project [SystemLib_Math_MathLib>>R64]
+[WARN]  [ACC_Experiment] [14:34:40] [WMdl881] Comparison of floating point values for equality or inequality [MyCCF_myCar_ACC>>Automatic (Component) aCCStatemachineTrigger]
+[INFO]  [ACC_Experiment] [14:34:40] [IIle17] Division is protected against division-by-0 at '/ACC/MyCCF/myCar/myDrive_3.esdl:91' [MyCCF_myCar_myDrive_3>>Automatic (Component) move]
+[INFO]  [ACC_Experiment] [14:34:40] [IIle17] Division is protected against division-by-0 at '/ACC/MyCCF/myCar/MyTurn.esdl:20' [MyCCF_myCar_MyTurn>>Automatic (Component) move]
+[INFO]  [ACC_Experiment] [14:34:40] C code generation issues reporting         (took:  0.019 s)
+[INFO]  [ACC_Experiment] [14:34:40] Option [code-disable-class-instance-handle-optimization=false] is ignored for PC Experiment; class instance handles will not be optimized.
+[WARN]  [ACC_Experiment] [14:34:40] Option [symbol-type-boolean=boolean] is ignored for PC Experiment; default type 'uint8' will be used.
+[INFO]  [ACC_Experiment] [14:34:41] L1 code generation                         (took:  0.840 s)
+[INFO]  [ACC_Experiment] [14:34:41] Start generating OS [D:\ETAS\ASCET-DEVELOPER7.9\plugins\com.etas.rta_osek_1.0.4\rta\bin\rtabuild.exe, -kD:\Graphical_Programming\ACC_PC_CGen\platform, -oD:\Graphical_Programming\ACC_PC_CGen\platform\rtabuild.log, -DestDir_h=D:\Graphical_Programming\ACC_PC_CGen\platform, -DestDir_c=D:\Graphical_Programming\ACC_PC_CGen\platform, D:\Graphical_Programming\ACC_PC_CGen\platform\conf.oil]
+[INFO]  [ACC_Experiment] [14:34:45] RTABuild version 5.0.1
+[INFO]  [ACC_Experiment] [14:34:45] Copyright � LiveDevices Ltd 2001-2006.
+[INFO]  [ACC_Experiment] [14:34:45] 
+[INFO]  [ACC_Experiment] [14:34:45] Finished code generation                   (took: 24.699 s)
+[INFO]  [ACC_Experiment] [14:34:45] Back animation preparation                 (took:  0.004 s)
+[INFO]  [ACC_Experiment] [14:34:45] Starting compile and link...
+[INFO]  [ACC_Experiment] [14:34:45] using user settings from: 
+[INFO]  [ACC_Experiment] [14:34:45] using compiler: gcc.exe (i686-win32-sjlj-rev0, Built by MinGW-W64 project) 12.2.0 Copyright (C) 2022 Free Software Foundation, Inc. This is free software; see the source for copying conditions.  There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+[INFO]  [ACC_Experiment] [14:34:45] creating C compiler invocation file [_compiler.opt]
+[INFO]  [ACC_Experiment] [14:34:45] creating [obj]
+[INFO]  [ACC_Experiment] [14:34:45] creating [_linker.opt]
+[INFO]  [ACC_Experiment] [14:34:45] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/ACC_Experiment_Automatic.o src/ACC_Experiment_Automatic.c 
+[INFO]  [ACC_Experiment] [14:34:45] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/MyCCF_myCar_ACC_Automatic.o src/MyCCF_myCar_ACC_Automatic.c 
+[INFO]  [ACC_Experiment] [14:34:45] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/MyCCF_myCar_Control_Automatic.o src/MyCCF_myCar_Control_Automatic.c 
+[INFO]  [ACC_Experiment] [14:34:45] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/MyCCF_myCar_Driver_Automatic.o src/MyCCF_myCar_Driver_Automatic.c 
+[INFO]  [ACC_Experiment] [14:34:45] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/MyCCF_myCar_myCar_Automatic.o src/MyCCF_myCar_myCar_Automatic.c 
+[INFO]  [ACC_Experiment] [14:34:45] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/MyCCF_myCar_myDrive_3_Automatic.o src/MyCCF_myCar_myDrive_3_Automatic.c 
+[INFO]  [ACC_Experiment] [14:34:45] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/MyCCF_myCar_MyTurn_Automatic.o src/MyCCF_myCar_MyTurn_Automatic.c 
+[INFO]  [ACC_Experiment] [14:34:45] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/MyCCF_resources_CarMessages_Automatic.o src/MyCCF_resources_CarMessages_Automatic.c 
+[INFO]  [ACC_Experiment] [14:34:45] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/MyCCF_resources_DriverMessages_Automatic.o src/MyCCF_resources_DriverMessages_Automatic.c 
+[INFO]  [ACC_Experiment] [14:34:45] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/SystemLib_Math_MathLib_R64.o src/SystemLib_Math_MathLib_R64.c 
+[INFO]  [ACC_Experiment] [14:34:45] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/SystemLib_Miscellaneous_DeltaTimeService_Automatic.o src/SystemLib_Miscellaneous_DeltaTimeService_Automatic.c 
+[INFO]  [ACC_Experiment] [14:34:47] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/ACC_Experiment.l1.o l1/ACC_Experiment.l1.c 
+[INFO]  [ACC_Experiment] [14:34:47] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/MyCCF_myCar_myCar_Automatic.l1.o l1/MyCCF_myCar_myCar_Automatic.l1.c 
+[INFO]  [ACC_Experiment] [14:34:47] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/MyCCF_myCar_myDrive_3_Automatic.l1.o l1/MyCCF_myCar_myDrive_3_Automatic.l1.c 
+[INFO]  [ACC_Experiment] [14:34:47] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/MyCCF_myCar_MyTurn_Automatic.l1.o l1/MyCCF_myCar_MyTurn_Automatic.l1.c 
+[INFO]  [ACC_Experiment] [14:34:47] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/MyCCF_myCar_Driver_Automatic.l1.o l1/MyCCF_myCar_Driver_Automatic.l1.c 
+[INFO]  [ACC_Experiment] [14:34:48] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/MyCCF_myCar_Control_Automatic.l1.o l1/MyCCF_myCar_Control_Automatic.l1.c 
+[INFO]  [ACC_Experiment] [14:34:48] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/MyCCF_myCar_ACC_Automatic.l1.o l1/MyCCF_myCar_ACC_Automatic.l1.c 
+[INFO]  [ACC_Experiment] [14:34:48] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/MyCCF_resources_CarMessages_Automatic.l1.o l1/MyCCF_resources_CarMessages_Automatic.l1.c 
+[INFO]  [ACC_Experiment] [14:34:48] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/MyCCF_resources_DriverMessages_Automatic.l1.o l1/MyCCF_resources_DriverMessages_Automatic.l1.c 
+[INFO]  [ACC_Experiment] [14:34:48] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/g++.exe -std=c++20  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2  @_compiler.opt -o obj/osgenwrapper.o D:/ETAS/ASCET-DEVELOPER7.9/configuration/org.eclipse.osgi/61/0/.cp/platform/INTECRIO_VP/RTA_OSEK/osgenwrapper.cpp 
+[INFO]  [ACC_Experiment] [14:34:48] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/oswrapper.o D:/ETAS/ASCET-DEVELOPER7.9/configuration/org.eclipse.osgi/61/0/.cp/platform/INTECRIO_VP/RTA_OSEK/oswrapper.c 
+[INFO]  [ACC_Experiment] [14:34:50] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/etasConfigTask.o D:/ETAS/ASCET-DEVELOPER7.9/configuration/org.eclipse.osgi/61/0/.cp/platform/code/etasConfigTask.c 
+[INFO]  [ACC_Experiment] [14:34:50] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/etasL1Isr.o D:/ETAS/ASCET-DEVELOPER7.9/configuration/org.eclipse.osgi/61/0/.cp/platform/code/etasL1Isr.c 
+[INFO]  [ACC_Experiment] [14:34:50] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/etasL1Task.o D:/ETAS/ASCET-DEVELOPER7.9/configuration/org.eclipse.osgi/61/0/.cp/platform/code/etasL1Task.c 
+[INFO]  [ACC_Experiment] [14:34:50] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/etasStopOsIsr.o D:/ETAS/ASCET-DEVELOPER7.9/configuration/org.eclipse.osgi/61/0/.cp/platform/code/etasStopOsIsr.c 
+[INFO]  [ACC_Experiment] [14:34:50] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/etasTimerIsr.o D:/ETAS/ASCET-DEVELOPER7.9/configuration/org.eclipse.osgi/61/0/.cp/platform/code/etasTimerIsr.c 
+[INFO]  [ACC_Experiment] [14:34:50] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/HardwareConfigurationDefinitions.o D:/ETAS/ASCET-DEVELOPER7.9/configuration/org.eclipse.osgi/61/0/.cp/platform/code/HardwareConfigurationDefinitions.c 
+[INFO]  [ACC_Experiment] [14:34:50] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/rtaInterface.o D:/ETAS/ASCET-DEVELOPER7.9/configuration/org.eclipse.osgi/61/0/.cp/platform/code/rtaInterface.c 
+[INFO]  [ACC_Experiment] [14:34:50] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/etasVpOs.o platform/etasVpOs.c 
+[INFO]  [ACC_Experiment] [14:34:50] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/osekdefs.o platform/osekdefs.c 
+[INFO]  [ACC_Experiment] [14:34:50] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/Task0.o platform/Task0.c 
+[INFO]  [ACC_Experiment] [14:34:50] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/StartupHook.o platform/StartupHook.c 
+[INFO]  [ACC_Experiment] [14:34:50] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/ShutdownHook.o platform/ShutdownHook.c 
+[INFO]  [ACC_Experiment] [14:34:50] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/gcc.exe -std=c2x  -c -pipe -Wpedantic -Wall -Wno-unused-variable -Wno-unused-value -Wno-missing-braces -O2    @_compiler.opt -o obj/ACC_Experiment.init.o platform/ACC_Experiment.init.c 
+[INFO]  [ACC_Experiment] [14:34:52] linking [ACC_Experiment.exe]
+[INFO]  [ACC_Experiment] [14:34:52] D:/ETAS/ASCET-DEVELOPER7.9/plugins/org.mingw.gcc.win32.x86_12.2.0/mingw/bin/g++.exe -Wl,--allow-multiple-definition -static @_linker.opt -o ACC_Experiment.exe
+[INFO]  [ACC_Experiment] [14:34:53] creating [ACC_Experiment.a2l.cod]
+[INFO]  [ACC_Experiment] [14:34:53] D:/ETAS/ASCET-DEVELOPER7.9/plugins/com.etas.hexfilecreator.win32.x86_1.0.2/ETargetHexFileCreator.exe ACC_Experiment.exe ACC_Experiment.a2l.cod
+[INFO]  [ACC_Experiment] [14:34:53] Finished compile and link                  (took:  8.275 s)
+[INFO]  [ACC_Experiment] [14:34:53] Starting ASAP2 generation...
+[INFO]  [ACC_Experiment] [14:34:53] Writing a2l D:\Graphical_Programming\ACC_PC_CGen\ACC_ExperimentL1.a2l
+[INFO]  [ACC_Experiment] [14:34:53] Writing a2l D:\Graphical_Programming\ACC_PC_CGen\ACC_ExperimentL1.a2l finished
+[INFO]  [ACC_Experiment] [14:34:53] Finished ASAP2 generation                  (took:  0.114 s)
+[INFO]  [ACC_Experiment] [14:35:19] Finished successfully PC experiment build  (took: 58.949 s)
+[INFO]  [ACC_Experiment] [14:35:19] --------------------------------------------------------------------------------
