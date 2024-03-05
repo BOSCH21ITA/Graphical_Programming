@@ -2,7 +2,7 @@ classType MyCCF.myCar.Control
 blockdiagramSpecification Main {
 	methodBody calc {
 		outPin active {
-			connection_3, connection_4, connection_6, connection_8, connection_10
+			connection_10, connection_3, connection_4, connection_6, connection_8
 		}
 	}
 	simpleIdentifier MyCCF.resources.DriverMessages.display at (671, 45) {
