@@ -12,7 +12,7 @@ class ACC {
 	@generated("statemachine", "000000")
 	public void aCCStatemachineTrigger() triggers ACCStatemachine;
 
-	@generated("statemachine", "511aa691")
+	@generated("statemachine", "91be91f9")
 	statemachine ACCStatemachine using ACCStatemachineStates {
 		start Off;
 
@@ -21,6 +21,7 @@ class ACC {
 				accOn = true;
 			}
 			transition brake > 0 to Braking;
+			transition on to Off;
 		}
 
 		state Off {
